@@ -3,7 +3,7 @@ require 'spec_helper'
 describe CustomersController do
   describe "#create" do
     context "it recieves a valid post request to create" do
-      it 'creates an aristocrat' do
+      it 'creates a customer' do
         post :create, { email: "customer@dealership.com", name: "mr salesman" }
         assigns(:customer).should be_a(Customer)
         assigns(:customer).should be_persisted
